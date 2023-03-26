@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repo Forker</title>
+    <script language="javascript">
+        function doFork() {
+            atoken = document.getElementById("token").value;
+            window.location.ref = "/fork-repo?token=" + atoken;
+        }
+    </script>
+</head>
+<body>
+<p>This form will take a github access token and create a fork of /mmkayz/hjoy-forker into the GitHub account of the user
+    who owns the access token.</p>
+<p>To create an access token:
+<ul>
+<li>Log in to Github  https://github.com</li>
+    <li>Navigate to Settings -> Developer Settings -> Personal access tokens</li>
+    <li>Under Tokens(classic).  Generate a new token</li>
+    <li>Copy and paste the token into the input below to create a fork of the repository.</li>
+</ul>
+</p>
+<form name="forkform" action="get-link" method="get">
+GitHub Access Token: <input id="token" name="token" />
+    <br />
+    <input type="submit" value="Get link" />
+</form>
+</body>
+</html>
